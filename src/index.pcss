@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  *::selection {
+    @apply text-white bg-teal-500
+  }
+
+  *::-moz-scrollbar,
+  *::-webkit-scrollbar {
+    @apply w-1 rounded-lg
+  }
+
+  *::-moz-scrollbar-track,
+  *::-webkit-scrollbar-track {
+    @apply bg-none
+  }
+
+  *::-moz-scrollbar-thumb,
+  *::-webkit-scrollbar-thumb {
+    @apply w-1 rounded-lg
+  }
+
+  *::-moz-scrollbar-thumb:hover,
+  *::-webkit-scrollbar-thumb:hover {
+    @apply bg-none
+  }
+
+  #spin-loader, .spin-loader {
+    background: conic-gradient(#0000 10%,
+        #0D9488);
+
+    -webkit-mask: radial-gradient(farthest-side,
+        #0000 calc(100% - 10px),
+        0);
+  }
+
+  input[type="number"],
+  input::-webkit-inner-spin-button,
+  input::-webkit-outer-spin-button {
+    appearance: none;
+    -moz-appearance: textfield;
+  }
+}
